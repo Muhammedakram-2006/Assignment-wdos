@@ -1,0 +1,696 @@
+/*------------ Navigation bar start here -----------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+.section-1{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/razer_blackshark_v2_pro_2023_w_1683268216_a60476a8_progressive.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background:linear-gradient(90deg,Black,rgb(255, 0, 0), rgb(0, 39, 179),rgb(239, 2, 239));
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo p {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+    transition: all 0.3s ease;
+}
+
+.navbar li {
+    margin: 20px 0px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar li a:hover {
+    background: #000000;
+    color: #22d3ee;
+    box-shadow: 0 0 10px #22d3ee, 0 0 20px #fe3a9c, 0 0 30px #f97316;
+}
+
+.navbar li a.active {
+    background: #00d8fa;
+    color: #000000;
+    box-shadow: 0 0 10px #ef1482, 0 0 20px #e76000, 0 0 30px #00d0ef;
+}
+
+/* Toggle button styles */
+.toggle-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-btn div {
+    width: 25px;
+    height: 3px;
+    background: #000000;
+    margin: 3px 0;
+}
+
+/* Mobile view adjustments */
+@media screen and (max-width: 768px) {
+
+    body {
+        height: auto;
+        padding: 0 10px;
+    }
+
+    .section-1 {
+        height: auto;
+        background-attachment: scroll; /* Disable background fixed for mobile */
+    }
+
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .logo {
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    .navbar {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .navbar li a {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+
+    .toggle-btn {
+        display: flex; /* Show the toggle button on mobile */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar li a:hover {
+        background: #000000;
+        color: #22d3ee;
+        box-shadow: 0 0 10px #22d3ee, 0 0 20px #fe3a9c, 0 0 30px #f97316;
+    }
+
+    .navbar li a.active {
+        background: #00d8fa;
+        color: #000000;
+        box-shadow: 0 0 10px #ef1482, 0 0 20px #e76000, 0 0 30px #00d0ef;
+    }
+
+    /* When the toggle button is clicked, show the navbar */
+    .navbar.active {
+        display: flex;
+    }
+}
+
+/* When the screen width is smaller than 480px (very small mobile screens) */
+@media screen and (max-width: 480px) {
+    .logo p {
+        font-size: 1.2rem;
+    }
+
+    .navbar li a {
+        font-size: 1rem;
+    }
+}
+
+/* ------------Here star the first content of the home page ----------*/
+
+#btn{
+    width: 230px;
+    height: 10vh;
+    background: #FEC53A;
+    color: #000;
+    outline: none;
+    border: none;
+    clip-path: polygon(35% 0, 100% 0, 100% 100%, 0% 100%);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 30px;
+}
+#btn :hover:{
+    color: #fe3ae1;
+}
+.content-wrapper{
+    width: 80%;
+    min-height: 80vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.content-desc h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #e8a600;
+}
+.content-desc p{
+    width: 560px;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin-bottom: 10px;
+}
+#btn2{
+    width: 350px;
+    height: 10vh;
+    padding-left: 20px;
+    outline: none;
+    border: none;
+    background: #FEC53A;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+    border-radius: 20px;
+    text-align: left;
+}
+.rakuto img{
+    width: 450px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+
+}
+
+/* Mobile view adjustments */
+@media only screen and (max-width: 768px) {
+
+    /* Button 1 */
+    #btn {
+        width: 200px;
+        height: 8vh;
+        font-size: 1rem;
+        padding-right: 20px;
+    }
+
+    /* Button 2 */
+    #btn2 {
+        width: 300px;
+        height: 8vh;
+        font-size: 1rem;
+        padding-left: 15px;
+        margin-top: 10px;
+    }
+
+    /* Content wrapper */
+    .content-wrapper {
+        width: 90%;
+        min-height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Content description */
+    .content-desc h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .content-desc p {
+        width: 90%;
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    /* Image */
+    .rakuto img {
+        width: 90%;
+        height: auto;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+}
+
+-------------------------------------------------------------------
+/* Section 2 starts here */
+
+.section-2{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+    background: linear-gradient(rgba(20, 138, 235, 0.767),rgb(0, 255, 242));
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+}
+
+.section-2 h2 {
+    color: #FEC53A;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-bottom: 30px;
+    background:linear-gradient(rgb(175, 21, 85),rgb(255, 0, 162),rgb(255, 255, 255));
+    padding: 12px;
+    border-radius: 4px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.content {
+    display: flex;
+    margin-top: 20px;
+    padding-left: 20%;
+}
+
+.image {
+    width: 30%;
+    height: 20%;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.number-list {
+    padding-top: 30px;
+    padding-left: 52px;
+    line-height: 25px;
+    margin: 10px;
+    color: #ffffff;
+}
+
+.description{
+    padding-left: 30px;
+    margin-top: 30px;
+    margin-right: 100px;
+    margin-block-start: 20px;
+    color: #ffffff;
+} 
+
+.bullet-list {
+    margin-top: 20px;
+    padding-left: 20px;
+    line-height: 15px;
+    color: #ffffff;
+}
+
+.bullet-list li {
+    margin-bottom: 5px;
+}
+
+
+/* mobile view code for Section 2 starts here */
+@media (max-width: 768px) {
+    .section-2 {
+        width: 90%; /* Reduce width for smaller screens */
+        padding: 15px; /* Reduce padding for compact layout */
+        margin: 10px auto; /* Adjust margin for smaller devices */
+        border-radius: 6px; /* Slightly smaller border-radius */
+        box-shadow: 0 2px 4px rgb(255, 255, 255); /* Subtle shadow for depth */
+    }
+
+    .section-2 h2 {
+        font-size: 24px; /* Adjust font size for better readability */
+        margin-bottom: 20px; /* Reduce spacing below heading */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .content {
+        flex-direction: column; /* Stack items vertically */
+        padding-left: 0; /* Remove unnecessary left padding */
+        align-items: center; /* Center content */
+        text-align: center; /* Align text centrally */
+    }
+
+    .image {
+        width: 80%; /* Increase image width to fit the screen */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 auto 15px auto; /* Center image and add bottom margin */
+    }
+
+    .number-list {
+        padding-top: 20px; /* Adjust padding */
+        padding-left: 0; /* Remove unnecessary left padding */
+        line-height: 22px; /* Adjust line spacing */
+        text-align: center; /* Center align text */
+        margin: 10px 0; /* Adjust margins */
+    }
+
+    .description {
+        padding-left: 0; /* Remove left padding */
+        margin: 20px auto; /* Center content and adjust margin */
+        color: #ffffff; /* Ensure consistent color */
+        text-align: center; /* Align text centrally */
+    }
+
+    .bullet-list {
+        padding-left: 10px; /* Reduce padding for compactness */
+        line-height: 20px; /* Adjust line spacing */
+        margin: 10px auto; /* Center and adjust margin */
+        color: #ffffff; /* Ensure consistent color */
+        text-align: left; /* Align bullets to the left */
+    }
+
+    .bullet-list li {
+        margin-bottom: 10px; /* Increase spacing between bullet items */
+    }
+}
+
+---------------------/* Section 3 starts here */---------------------------------
+h2, h3 {
+    margin: 0;
+    padding: 10px 0;
+  }
+
+.section-3{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+   
+}
+.section-3 h2{
+    color: #000000;
+    padding: 13px;
+}
+.section-3-content{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: calc(30.33% - 10px);
+    margin-right: 30px;
+    padding: 10px;
+    text-align: left;
+    inset-inline-start: 20px;
+    border: 3px solid #ff0062;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(1, 22, 248, 0.788);
+}
+
+.card img{
+    width: 380px;
+    height: 300px;
+    justify-items: center;
+    background: linear-gradient(rgb(33, 108, 228),rgb(251, 252, 255),rgb(208, 10, 211)rgb(254, 253, 254));
+}
+.card h3{
+    color: #FEC53A;
+    justify-items: center;
+    padding-top: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.card p{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ffffff;   
+}
+
+
+/* section 3 Responsive styles for mobile */
+@media (max-width: 768px) {
+    h2, h3 {
+      font-size: 1.2rem; /* Reduce font size for smaller screens */
+      padding: 5px 0; /* Adjust padding for better spacing */
+    }
+  
+    .section-3 {
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+  
+    .section-3 h2 {
+      font-size: 1.5rem; /* Adjust heading size */
+      text-align: center; /* Center-align the heading */
+    }
+  
+    .section-3-content {
+      flex-direction: column; /* Stack cards vertically */
+      gap: 20px; /* Adjust spacing between cards */
+    }
+  
+    .card {
+      width: 100%; /* Cards take full width on mobile */
+      margin: 0 auto; /* Center the card */
+      padding: 15px; /* Add some padding for content */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    }
+  
+    .card img {
+      width: 100%; /* Image scales to fit card width */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 10px; /* Add rounded corners for images */
+    }
+  
+    .card h3 {
+      font-size: 1.2rem; /* Adjust font size for headings */
+      text-align: center; /* Center-align the text */
+    }
+  
+    .card p {
+      font-size: 1rem; /* Adjust paragraph text size */
+      line-height: 1.4; /* Improve readability */
+      text-align: justify; /* Align text for better presentation */
+    }
+  }
+  
+
+-------------------------------------------------------------------------------------------------------------
+
+/* Footer starts here */
+.footer {
+    margin: 60px;
+    background-color: #f1f1f1;
+    padding: 20px 20px;
+    border-top: 2px solid #6f0986;
+}
+
+.footer-container {
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.footer-logo {
+    max-width: 100px;
+    margin-bottom: 15px;
+}
+
+.footer-contact {
+    margin-bottom: 20px;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.phone-number {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.footer-info {
+    margin-bottom: 20px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    color: #ffffff;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-right {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-right h3 {
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.footer-right ul {
+    list-style: none;
+}
+
+.footer-right ul li {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.footer-right ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+}
+.footer-right ul li a.active{
+    color: #fff;
+}
+
+.footer-right ul li a:hover:not(.active){
+    color: #fe3ae1;
+}
+
+/* Footer styles for mobile view */
+@media (max-width: 768px) {
+    .footer {
+        margin: 20px; /* Reduce margin for smaller screens */
+        padding: 15px 10px; /* Adjust padding for compact view */
+        text-align: center; /* Center-align content for better readability */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        margin: 0; /* Remove extra margin */
+    }
+
+    .footer-left,
+    .footer-right {
+        flex: unset; /* Remove flex-basis for proper stacking */
+        margin: 10px 0; /* Add spacing between sections */
+        width: 100%; /* Take full width */
+    }
+
+    .footer-logo {
+        max-width: 80px; /* Adjust logo size */
+        margin: 0 auto 10px; /* Center the logo and add spacing */
+    }
+
+    .footer-contact {
+        margin-bottom: 10px; /* Reduce spacing */
+    }
+
+    .icon-text {
+        justify-content: center; /* Center-align icons and text */
+        margin-bottom: 10px; /* Add spacing */
+    }
+
+    .icon {
+        width: 25px; /* Adjust icon size */
+    }
+
+    .phone-number {
+        font-size: 16px; /* Reduce font size */
+    }
+
+    .footer-info p {
+        font-size: 14px; /* Reduce font size */
+    }
+
+    .footer-social a {
+        margin: 0 5px; /* Reduce spacing between social icons */
+    }
+
+    .footer-social img {
+        width: 25px; /* Adjust icon size */
+        height: 25px;
+    }
+
+    .footer-right h3 {
+        font-size: 20px; /* Reduce heading size */
+    }
+
+    .footer-right ul {
+        padding: 0; /* Remove padding */
+    }
+
+    .footer-right ul li {
+        margin: 5px 0; /* Adjust spacing between list items */
+    }
+
+    .footer-right ul li a {
+        font-size: 13px; /* Reduce font size */
+    }
+}
+

@@ -1,0 +1,554 @@
+/* Navigation bar start here */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000000;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-1{
+  width: 100%;
+  height: 100vh;
+  background-image: url(Images/flame.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background:linear-gradient(90deg,Black,rgb(255, 0, 0), rgb(0, 39, 179),rgb(239, 2, 239));
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.logo p {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+
+.navbar li {
+  margin: 20px 0px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar li a:hover {
+  background: #000000;
+  color: #22d3ee;
+  box-shadow: 0 0 10px #22d3ee, 0 0 20px #fe3a9c, 0 0 30px #f97316;
+}
+
+.navbar li a.active {
+  background: #00d8fa;
+  color: #000000;
+  box-shadow: 0 0 10px #ef1482, 0 0 20px #e76000, 0 0 30px #00d0ef;
+}
+
+/* Toggle button styles */
+.toggle-btn {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-btn div {
+  width: 25px;
+  height: 3px;
+  background: #000000;
+  margin: 3px 0;
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .section-1 {
+    background-attachment: scroll; /* Fixes background image issue on mobile */
+  }
+
+  header {
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar {
+    display: none; /* Hide navbar by default */
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .navbar li {
+    margin: 10px 0;
+  }
+
+  .navbar li a {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+  }
+
+  .toggle-btn {
+    display: flex; /* Show the toggle button */
+  }
+
+  .toggle-btn div {
+    background: #000000;
+  }
+
+  /* Show navbar when toggle button is clicked */
+  .navbar.active {
+    display: flex;
+  }
+}
+
+
+
+-------------------Section 1 start here --------------------
+
+h2, h3 {
+    margin: 0;
+    padding: 10px 0;
+  }
+  
+  section {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 25px;
+    border-color: red;
+  }
+  
+  /* Introduction Section */
+  .intro {
+    margin-bottom: 40px;
+  }
+
+/* This is to design the "About Our Upcoming Games" */
+.main-heading{ 
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 30px;
+  margin-bottom: 30px;
+  background: linear-gradient(to right, rgb(239, 2, 239),rgb(0, 39, 179),rgb(255, 0, 0),rgb(0, 0, 0));
+  padding: 12px;
+  border-radius: 2px;
+}
+  
+.intro-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+  
+.intro-content img {
+    width: 450px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ff0000;
+}
+  
+.intro-content p {
+    color: #00ddff;
+    font-size: 18px;
+    line-height: 2;
+}
+
+/* ---------------------------------Mobile View for section 1 ----------------------------------------- */
+@media only screen and (max-width: 768px) {
+  /* General Adjustments */
+  h2, h3 {
+    margin: 0;
+    padding: 8px 0;
+  }
+
+  section {
+    max-width: 100%;
+    padding: 15px;
+    margin: 10px;
+  }
+
+  /* Main Heading */
+  .main-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  /* Introduction Section */
+  .intro {
+    margin-bottom: 30px;
+  }
+
+  .intro-content {
+    display: block; /* Stack elements vertically */
+    gap: 20px;
+  }
+
+  .intro-content img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ff0000;
+  }
+
+  .intro-content p {
+    color: #00ddff;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}
+  
+  /* --------------Games Grid Section -------------------*/
+.H2-heading{
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 30px;
+  margin-bottom: 30px;
+  background: linear-gradient(to right, black,rgb(255, 0, 0), rgb(0, 39, 179),rgb(239, 2, 239));
+  padding: 12px;
+  border-radius: 4px;
+  }
+  
+  
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .game {
+    position: relative;
+    width: 440px;
+    height: 280px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .game img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .game:hover {
+    transform: scale(1.05);
+  }
+  
+  .release-date {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #1760fc;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.s ease;
+  }
+  
+  .game:hover .release-date {
+    opacity: 1;
+  }
+
+  /* Mobile View */
+@media (max-width: 768px) {
+  .H2-heading {
+    font-size: 24px;
+    padding: 10px;
+  }
+
+  .grid {
+    gap: 20px;
+  }
+
+  .game {
+    width: 100%;
+    height: auto;
+  }
+
+  .game img {
+    height: 200px;
+  }
+}
+
+/* Small Mobile View */
+@media (max-width: 480px) {
+  .H2-heading {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .grid {
+    gap: 10px;
+  }
+
+  .game {
+    width: 100%;
+    height: auto;
+  }
+
+  .game img {
+    height: 180px;
+  }
+}
+
+/* -------------------------Footer starts here ==-------------------------------------*/
+.footer {
+  margin: 60px;
+  background-color: #000000;
+  padding: 20px 20px;
+  border-top: 2px solid #6f0986;
+}
+
+.footer-container {
+  margin: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  flex: 2;
+  margin-right: 20px;
+}
+
+.footer-logo {
+  max-width: 100px;
+  margin-bottom: 15px;
+}
+
+.footer-contact {
+  margin-bottom: 20px;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.phone-number {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.footer-info {
+  margin-bottom: 20px;
+}
+
+.footer-info p {
+  margin: 5px 0;
+  color: #ffffff;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-right h3 {
+  margin-bottom: 15px;
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.footer-right ul {
+  list-style: none;
+}
+
+.footer-right ul li {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.footer-right ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+}
+.footer-right ul li a.active{
+  color: #fff;
+}
+
+.footer-right ul li a:hover:not(.active){
+  color: #fe3ae1;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .footer-container {
+    display: block;
+    margin: 0;
+  }
+
+  .footer-left, .footer-right {
+    flex: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  .footer-logo {
+    max-width: 80px;
+    margin-bottom: 10px;
+  }
+
+  .footer-contact {
+    margin-bottom: 15px;
+  }
+
+  .phone-number {
+    font-size: 16px;
+  }
+
+  .footer-info p {
+    font-size: 14px;
+  }
+
+  .footer-social a {
+    margin-right: 8px;
+  }
+
+  .footer-social img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .footer-right h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .footer-right ul li {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .footer-right ul li a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px;
+  }
+
+  .footer-logo {
+    max-width: 70px;
+    margin-bottom: 8px;
+  }
+
+  .footer-contact {
+    margin-bottom: 10px;
+  }
+
+  .phone-number {
+    font-size: 14px;
+  }
+
+  .footer-info p {
+    font-size: 12px;
+  }
+
+  .footer-social a {
+    margin-right: 6px;
+  }
+
+  .footer-social img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer-right h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .footer-right ul li {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .footer-right ul li a {
+    font-size: 10px;
+  }
+}

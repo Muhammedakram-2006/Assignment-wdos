@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Queries and FAQ.css">
+  <title> Queries and FAQ</title>
+</head>
+<body>
+    <div class="section-1">
+        <header>
+            <div class="logo">
+                <img src="Images\Logo.jpg" alt="logo">
+                <p>The Gamers paradise</p>
+            </div>
+
+            <div class="toggle-btn" id="toggle-btn">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <ul class="navbar" id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About us.html">About us</a></li>
+                <li><a href="Upcoming Games.html">Upcoming Games</a></li>
+                <li><a href="Consoles and gameing periphal.html">Consoles & Gaming Peripherals</a></li>
+                <li><a href="Tech News.html">Tech News</a></li>
+                <li><a href="Games.html">Games</a></li>
+                <li><a href="Queries and FAQ .html">Queries and FAQ</a></li>
+            </ul>
+        </header>
+
+        <script>
+            const toggleBtn = document.getElementById('toggle-btn');
+            const navbar = document.getElementById('navbar');
+    
+            toggleBtn.addEventListener('click', () => {
+                navbar.classList.toggle('active');
+            });
+        </script>
+
+        <div class="container">
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <h1>FAQs</h1>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <h2>What types of games do you offer?</h2>
+                        <p>We offer a wide range of games, including action, adventure, puzzle, RPG, strategy, and sports games. Whether you enjoy single-player or multiplayer experiences, we have something for everyone!</p>
+                    </div>
+                    <div class="faq-item">
+                        <h2>How can I create an account on your website?</h2>
+                        <p>Creating an account is easy! Simply click on the "Sign Up" button at the top of the page, fill in your details such as username, email, and password, and you're good to go! You can also sign up using your social media accounts for quicker access.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h2>Do I need to pay to play the games?</h2>
+                        <p>Many of our games are free to play, but we also offer premium content and in-game purchases for an enhanced experience. You can enjoy a wide selection of games without any upfront costs!</p>
+                    </div>
+                    <div class="faq-item">
+                        <h2>Can I play games with my friends on your platform?</h2>
+                        <p>Yes! We offer various multiplayer games where you can team up or compete against your friends. Simply invite them to join your game, and enjoy the fun together.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h2>What devices can I use to play games on your website?</h2>
+                        <p>Our games are compatible with a wide range of devices, including PCs, laptops, and mobile devices. For the best experience, we recommend using the latest version of your web browser.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h2>How do I report a bug or technical issue?</h2>
+                        <p>f you're experiencing a bug or technical issue, please visit our "Support" page and fill out the contact form. Be sure to provide details about the problem, and our team will assist you as soon as possible.</p>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Question Form -->
+            <section class="question-form">
+                <h2>Any Questions?</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="phone">Phone no:</label>
+                    <input type="tel" id="phone" name="phone" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="question">Question:</label>
+                    <textarea id="question" name="question" rows="4" required></textarea>
+    
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Logo and Contact Section -->
+                <div class="footer-left">
+                    <img src="Images\Logo.jpg" alt="Tecroot Logo" class="footer-logo">
+                    <div class="footer-contact">
+                        <div class="icon-text">
+                            <img src="Images\headphone-regular-48.png" alt="Headset Icon" class="icon">
+                            <p>Got Questions? Call us between 10AM and 7PM!</p>
+                        </div>
+                        <p class="phone-number">+94 766 76 76 75</p>
+                    </div>
+                    <div class="footer-info">
+                        <p><strong>Contact Info</strong></p>
+                        <p>No. 247, Galle Road, Bambalapitiya, Colombo - 4, Sri Lanka</p>
+                        <p>techie@tecroot.lk</p>
+                        <p>+94 766 76 76 75 (Sales)</p>
+                        <p>+94 766 76 76 79 (Technical)</p>
+                        <p>+94 766 689 689 (Management)</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#"><img src="Images/facebook-circle-logo-24.png" alt="Facebook"></a>
+                        <a href="#"><img src="Images/whatsapp-logo-48.png" alt="WhatsApp"></a>
+                        <a href="#"><img src="Images/linkedin-square-logo-48.png" alt="LinkedIn"></a>
+                        <a href="#"><img src="Images/instagram-logo-48.png" alt="Instagram"></a>
+                        <a href="#"><img src="Images/youtube-logo-48.png" alt="YouTube"></a>
+                    </div>
+                </div>
+                <!-- Navigation Section -->
+                <div class="footer-right">
+                    <h3>Find It Fast</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About us.html">About us</a></li>
+                        <li><a href="Upcoming Games.html">Upcoming Games</a></li>
+                        <li><a href="Consoles and gameing periphal.html">Consoles & Gaming Peripherals</a></li>
+                        <li><a href="Tech News.html">Tech News</a></li>
+                        <li><a href="Games.html">Games</a></li>
+                        <li><a href="Queries and FAQ .html">Queries and FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    
+</body>
+</html>
