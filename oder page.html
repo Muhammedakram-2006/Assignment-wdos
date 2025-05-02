@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="order page.css" />
+  <title>Order Page</title>
+</head>
+<body>
+
+  <div class="section-1">
+    <header>
+      <div class="logo">
+        <img src="Images/Logo.jpg" alt="logo" />
+        <p>The Gamers Paradise</p>
+      </div>
+      <div class="toggle-btn" id="toggle-btn">
+        <div></div><div></div><div></div>
+      </div>
+      <ul class="navbar" id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About us.html">About Us</a></li>
+        <li><a href="Upcoming Games.html">Upcoming Games</a></li>
+        <li><a href="Consoles and gameing periphal.html">Consoles & Peripherals</a></li>
+        <li><a href="Tech News.html">Tech News</a></li>
+        <li><a href="Games.html">Games</a></li>
+        <li><a href="order page.html">Order Page</a></li>
+        <li><a href="Queries and FAQ .html">Queries and FAQ</a></li>
+      </ul>
+    </header>
+  </div>
+
+  <form id="orderForm">
+    <!-- Processors -->
+    <section>
+      <h2>Processors</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="IMG 2/Processor 1.jpg" alt="AMD ryzen 5">
+          <label>AMD ryzen 5  ($250)</label><br>
+          <input type="number" name="AMD ryzen 5" value="1" min="1" data-price="250">
+          <button type="button" onclick="addToCart('AMD ryzen 5', 250, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Processor 2.jpg" alt="AMD Ryzen 7 5700G">
+          <label>AMD Ryzen 7 5700G ($300)</label><br>
+          <input type="number" name="AMD Ryzen 7 5700G" value="1" min="1" data-price="300">
+          <button type="button" onclick="addToCart('AMD Ryzen 7 5700G', 300, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Processor 3.jpg" alt="AMD Ryzen 9 7950X">
+          <label>AMD Ryzen 9 7950X ($250)</label><br>
+          <input type="number" name="AMD Ryzen 9 7950X" value="1" min="1" data-price="250">
+          <button type="button" onclick="addToCart('AMD Ryzen 9 7950X', 250, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Processor 4.jpg" alt="Intel Core I5-12400">
+          <label>Intel Core I5-12400 ($173)</label><br>
+          <input type="number" name="Intel Core I5-12400" value="1" min="1" data-price="173">
+          <button type="button" onclick="addToCart('Intel Core I5-12400', 173, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Processor 5.jpg" alt="Intel Core I7-14700 Processor">
+          <label>Intel Core I7-14700 Processor ($290)</label><br>
+          <input type="number" name="Intel Core I7-14700 Processor" value="1" min="1" data-price="290">
+          <button type="button" onclick="addToCart('Intel Core I7-14700 Processor', 290, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Processor 6.jpg" alt="Intel Core I9-14900K Processor ">
+          <label>Intel Core I9-14900K Processor  ($290)</label><br>
+          <input type="number" name="Intel Core I9-14900K Processor " value="1" min="1" data-price="290">
+          <button type="button" onclick="addToCart('Intel Core I9-14900K Processor ', 290, this)">Add to Cart</button>
+        </div>
+      </div>
+
+       <!-- storage devices -->
+      <h2>Storage Devices</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="IMG 2/Storage device 1.jpg" alt="Seagate BarraCuda 1TB Desktop Internal Hard Drive">
+          <label>Seagate BarraCuda 1TB Desktop Internal Hard Drive($300)</label><br>
+          <input type="number" name="Seagate BarraCuda 1TB Desktop Internal Hard Drive" value="1" min="1" data-price="300">
+          <button type="button" onclick="addToCart('Seagate BarraCuda 1TB Desktop Internal Hard Drive', 300, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Storage device 2.jpg" alt="ADATA Legend 710 PCIe Gen3 X4 2280 1tb M.2 NVME SSD ">
+          <label>ADATA Legend 710 PCIe Gen3 X4 2280 1tb M.2 NVME SSD ($250)</label><br>
+          <input type="number" name="ADATA Legend 710 PCIe Gen3 X4 2280 1tb M.2 NVME SSD " value="1" min="1" data-price="250">
+          <button type="button" onclick="addToCart('ADATA Legend 710 PCIe Gen3 X4 2280 1tb M.2 NVME SSD ', 250, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Storage device 3.jpg" alt="Corsair MP600 Pro XT 1TB PCle Gen4 M.2 NVME SSD ">
+          <label>Corsair MP600 Pro XT 1TB PCle Gen4 M.2 NVME SSD ($150)</label><br>
+          <input type="number" name="Corsair MP600 Pro XT 1TB PCle Gen4 M.2 NVME SSD " value="1" min="1" data-price="150">
+          <button type="button" onclick="addToCart('Corsair MP600 Pro XT 1TB PCle Gen4 M.2 NVME SSD ', 150, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Storage device 4.jpg" alt="Corsair MP700 Pro 2TB PCIe Gen5 M.2 NVME SSD">
+          <label>Corsair MP700 Pro 2TB PCIe Gen5 M.2 NVME SSD ($270)</label><br>
+          <input type="number" name="Corsair MP700 Pro 2TB PCIe Gen5 M.2 NVME SSD" value="1" min="1" data-price="270">
+          <button type="button" onclick="addToCart('Corsair MP700 Pro 2TB PCIe Gen5 M.2 NVME SSD', 270, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Storage device 5.jpg" alt="SanDisk Computer USB Pen Drive, For Storage Data, 170mbps">
+          <label>SanDisk Computer USB Pen Drive, For Storage Data, 170mbps($290)</label><br>
+          <input type="number" name="SanDisk Computer USB Pen Drive, For Storage Data, 170mbps" value="1" min="1" data-price="290">
+          <button type="button" onclick="addToCart('SanDisk Computer USB Pen Drive, For Storage Data, 170mbps', 290, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Storage device 6.jpg" alt="MSI Spatium M560 2TB PCIE 5.0 NVME M.2 SSD ">
+          <label>MSI Spatium M560 2TB PCIE 5.0 NVME M.2 SSD  ($230)</label><br>
+          <input type="number" name="MSI Spatium M560 2TB PCIE 5.0 NVME M.2 SSD " value="1" min="1" data-price="230">
+          <button type="button" onclick="addToCart('MSI Spatium M560 2TB PCIE 5.0 NVME M.2 SSD ', 230, this)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!--------Mother Board   -------->
+      <h2>Mother Board </h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="IMG 2/Mother Board 1.jpg" alt="Asus Prime A520M-K (DDR4) Micro ATX">
+          <label>Asus Prime A520M-K (DDR4) Micro ATX ($600)</label><br>
+          <input type="number" name="Asus Prime A520M-K (DDR4) Micro ATX" value="1" min="1" data-price="600">
+          <button type="button" onclick="addToCart('Asus Prime A520M-K (DDR4) Micro ATX', 600, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Mother Board 2.jpg" alt="Asus Prime B450M-A II (DDR4) Motherboard ( 3 YEARS WARRANTY )">
+          <label>Asus Prime B450M-A II (DDR4) Motherboard ($500)</label><br>
+          <input type="number" name="Asus Prime B450M-A II (DDR4) Motherboard" value="1" min="1" data-price="500">
+          <button type="button" onclick="addToCart('Asus Prime B450M-A II (DDR4) Motherboard', 500, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Mother Board 3.jpg" alt="Asus Rog Strix Z790-F Gaming WIFI II (DDR5) Motherboard ">
+          <label>Asus Rog Strix Z790-F Gaming WIFI II (DDR5) Motherboard  ($1480)</label><br>
+          <input type="number" name="Asus Rog Strix Z790-F Gaming WIFI II (DDR5) Motherboard " value="1" min="1" data-price="1480">
+          <button type="button" onclick="addToCart(' Asus Rog Strix Z790-F Gaming WIFI II (DDR5) Motherboard ', 1480, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Mother Board 4.jpg" alt="Asus TUF Gaming B550-Plus WIFI II Motherboard ">
+          <label>Asus TUF Gaming B550-Plus WIFI II Motherboard  ($970)</label><br>
+          <input type="number" name="Asus TUF Gaming B550-Plus WIFI II Motherboard " value="1" min="1" data-price="970">
+          <button type="button" onclick="addToCart('Asus TUF Gaming B550-Plus WIFI II Motherboard ', 970, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Mother Board 5.jpg" alt="MSI A520M-A Pro Motherboard ">
+          <label>MSI A520M-A Pro Motherboard  ($380)</label><br>
+          <input type="number" name="MSI A520M-A Pro Motherboard " value="1" min="1" data-price="380">
+          <button type="button" onclick="addToCart('MSI A520M-A Pro Motherboard ', 380, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Mother Board 6.jpg" alt="NZXT N7 Z790 Motherboard - Intel Z790 Chipset With Wi-Fi And White Cover ">
+          <label>NZXT N7 Z790 Motherboard - Intel Z790 Chipset With Wi-Fi And White Cover ($1150)</label><br>
+          <input type="number" name="NZXT N7 Z790 Motherboard - Intel Z790 Chipset With Wi-Fi And White Cover" value="1" min="1" data-price="1150">
+          <button type="button" onclick="addToCart('NZXT N7 Z790 Motherboard - Intel Z790 Chipset With Wi-Fi And White Cover', 1150, this)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- graphic Card -->
+      <h2>Graphics Cards</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="IMG 2/Graphic card 1.jpg" alt="Asus ROG Strix GeForce RTX 4060 TI 8GB GDDR6X OC Graphics Card">
+          <label>Asus ROG Strix GeForce RTX 4060 TI 8GB GDDR6X OC Graphics Card ($1250)</label><br>
+          <input type="number" name="Asus ROG Strix GeForce RTX 4060 TI 8GB GDDR6X OC Graphics Card" value="1" min="1" data-price="1250">
+          <button type="button" onclick="addToCart('Asus ROG Strix GeForce RTX 4060 TI 8GB GDDR6X OC Graphics Card', 1250, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Graphic card 2.jpg" alt="MSI Geforce RTX 5090 VANGUARD SOC 32GB GDDR7X ">
+          <label>MSI Geforce RTX 5090 VANGUARD SOC 32GB GDDR7X ($1500)</label><br>
+          <input type="number" name="MSI Geforce RTX 5090 VANGUARD SOC 32GB GDDR7X" value="1" min="1" data-price="1500">
+          <button type="button" onclick="addToCart('MSI Geforce RTX 5090 VANGUARD SOC 32GB GDDR7X ', 1500, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Graphic card 3.jpg" alt="MSI GeForce RTX 3080 Gaming Z Trio 10GB LHR GDDR6X ">
+          <label>MSI GeForce RTX 3080 Gaming Z Trio 10GB LHR GDDR6X  ($1000)</label><br>
+          <input type="number" name="MSI GeForce RTX 3080 Gaming Z Trio 10GB LHR GDDR6X " value="1" min="1" data-price="1000">
+          <button type="button" onclick="addToCart('MSI GeForce RTX 3080 Gaming Z Trio 10GB LHR GDDR6X ', 1000, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Graphic card 4.jpg" alt="MSI Geforce RTX 5070 TI Ventus OC 3X 16GB GDDR7X">
+          <label>MSI Geforce RTX 5070 TI Ventus OC 3X 16GB GDDR7X ($700)</label><br>
+          <input type="number" name= "MSI Geforce RTX 5070 TI Ventus OC 3X 16GB GDDR7X" value="1" min="1" data-price="700">
+          <button type="button" onclick="addToCart('MSI Geforce RTX 5070 TI Ventus OC 3X 16GB GDDR7X', 700, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Graphic card 5.jpg" alt="ASUS Dual GeForce RTX 3050 V2 8GB GDDR6 OC">
+          <label>ASUS Dual GeForce RTX 3050 V2 8GB GDDR6 OC($1000)</label><br>
+          <input type="number" name="ASUS Dual GeForce RTX 3050 V2 8GB GDDR6 OC" value="1" min="1" data-price="1000">
+          <button type="button" onclick="addToCart('ASUS Dual GeForce RTX 3050 V2 8GB GDDR6 OC', 1000, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Graphic card 6.jpg" alt="ASUS Dual GeForce RTX 4070 Super 12GB GDDR6 OC ">
+          <label>ASUS Dual GeForce RTX 4070 Super 12GB GDDR6 OC ($500)</label><br>
+          <input type="number" name="ASUS Dual GeForce RTX 4070 Super 12GB GDDR6 OC " value="1" min="1" data-price="500">
+          <button type="button" onclick="addToCart('ASUS Dual GeForce RTX 4070 Super 12GB GDDR6 OC ', 500, this)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Memory -->
+      <h2> Memory (RAM) </h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="IMG 2/Memory 1.jpg" alt="Corsair Dominator Platinum RGB 32GB">
+          <label>Corsair Dominator Platinum RGB 32GB ($30)</label><br>
+          <input type="number" name="Corsair Dominator Platinum RGB 32GB" value="1" min="1" data-price="30">
+          <button type="button" onclick="addToCart('Corsair Dominator Platinum RGB 32GB', 30, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Memory 2.jpg" alt="Corsair Dominator Titanium RGB 32GB (2X16GB) DDR5 6000MHz Amd">
+          <label>Corsair Dominator Titanium RGB 32GB (2X16GB) DDR5 6000MHz Amd($160)</label><br>
+          <input type="number" name="Corsair Dominator Titanium RGB 32GB (2X16GB) DDR5 6000MHz Amd" value="1" min="1" data-price="160">
+          <button type="button" onclick="addToCart('Corsair Dominator Titanium RGB 32GB (2X16GB) DDR5 6000MHz Amd', 160, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Memory 3.jpg" alt="Adata 16GB (1x16GB) DDR4 3200MHz">
+          <label>Adata 16GB (1x16GB) DDR4 3200MHz</label><br>
+          <input type="number" name="Adata 16GB (1x16GB) DDR4 3200MHz" value="1" min="1" data-price="150">
+          <button type="button" onclick="addToCart('Adata 16GB (1x16GB) DDR4 3200MHz', 150, this)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="IMG 2/Memory 4.jpg" alt="Corsair Vengeance 16GB (1x16GB) DDR5">
+          <label>Corsair Vengeance 16GB (1x16GB) DDR5 ($150)</label><br>
+          <input type="number" name="Corsair Vengeance 16GB (1x16GB) DDR5 " value="1" min="1" data-price="150">
+          <button type="button" onclick="addToCart('Corsair Vengeance 16GB (1x16GB) DDR5 ', 150, this)">Add to Cart</button>
+        </div>
+    </section>
+  </form>
+
+  <h2 id="cart_mod">Cart</h2>
+  <table id="summaryTable" border="1">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <h3><strong><span id="OverTotal">Overall Total:</span></strong> <span id="totalPrice"> $0.00</span></h3>
+
+  <!-- Cart Section -->
+  <div class="cart-actions">
+    <button type="button" onclick="buyNow()">Buy Now</button>
+    <button type="button" onclick="saveFavourite()">Add to Favourites</button>
+    <button type="button" onclick="applyFavourite()">Apply Favourites</button>
+  </div>
+
+  <!-- Footer ------>
+  <footer class="footer">
+    <div class="footer-container">
+        <!-- Logo and Contact Section -->
+        <div class="footer-left">
+            <img src="Images/Logo.jpg" alt="Tecroot Logo" class="footer-logo">
+            <div class="footer-contact">
+                <div class="icon-text">
+                    <img src="Images/headphone-regular-48.png" alt="Headset Icon" class="icon">
+                    <p>Got Questions? Call us between 10AM and 7PM!</p>
+                </div>
+                <p class="phone-number">+94 766 76 76 75</p>
+            </div>
+            <div class="footer-info">
+                <p><strong>Contact Info</strong></p>
+                <p>No. 247, Galle Road, Bambalapitiya, Colombo - 4, Sri Lanka</p>
+                <p>techie@tecroot.lk</p>
+                <p>+94 766 76 76 75 (Sales)</p>
+                <p>+94 766 76 76 79 (Technical)</p>
+                <p>+94 766 689 689 (Management)</p>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="Images/facebook-circle-logo-24.png" alt="Facebook"></a>
+                <a href="#"><img src="Images/whatsapp-logo-48.png" alt="WhatsApp"></a>
+                <a href="#"><img src="Images/linkedin-square-logo-48.png" alt="LinkedIn"></a>
+                <a href="#"><img src="Images/instagram-logo-48.png" alt="Instagram"></a>
+                <a href="#"><img src="Images/youtube-logo-48.png" alt="YouTube"></a>
+            </div>
+        </div>
+        <!-- Navigation Section -->
+        <div class="footer-right">
+            <h3>Find It Fast</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About us.html">About us</a></li>
+                <li><a href="Upcoming Games.html">Upcoming Games</a></li>
+                <li><a href="Consoles and gameing periphal.html">Consoles & Gaming Peripherals</a></li>
+                <li><a href="Tech News.html">Tech News</a></li>
+                <li><a href="Games.html">Games</a></li>
+                <li><a href="Queries and FAQ .html">Queries and FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</body>
+<script src="script.js"></script>
+</html>
